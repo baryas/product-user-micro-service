@@ -1,0 +1,20 @@
+server:
+  port: 9191
+
+
+spring:
+  main:
+    web-application-type: reactive
+  application:
+    name: API-GATEWAY
+  cloud:
+    gateway:
+      routes:
+        - id: user-service
+          uri: lb://USER-SERVICE
+          predicates:
+            - Path=/users/**
+        - id: product-service
+          uri: lb://PRODUCT-SERVICE
+          predicates:
+            - Path=/products/**
