@@ -10,7 +10,7 @@ spring:
     driver-class-name: com.mysql.jdbc.Driver
     username: root
     url: jdbc:mysql://localhost:3306/micro_service2?useSSL=false
-    password: Shubhu@242424
+    password: password
   jpa:
     properties:
       hibernate:
